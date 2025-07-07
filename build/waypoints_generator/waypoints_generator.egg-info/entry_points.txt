@@ -1,0 +1,2 @@
+[console_scripts]
+waypoints_generator = waypoints_generator.waypoints_generator:main

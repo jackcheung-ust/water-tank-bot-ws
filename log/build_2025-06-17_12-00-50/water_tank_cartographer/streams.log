@@ -1,0 +1,25 @@
+[0.019s] Invoking command in '/home/jack/water_tank_ws/build/water_tank_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_cartographer -- -j20 -l20
+[0.210s] Invoked command in '/home/jack/water_tank_ws/build/water_tank_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_cartographer -- -j20 -l20
+[0.211s] Invoking command in '/home/jack/water_tank_ws/build/water_tank_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_cartographer
+[0.218s] -- Install configuration: ""
+[0.218s] -- Execute custom install script
+[0.219s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/config/cart_pure_locate.lua
+[0.219s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/config/cart_slam_2d.lua
+[0.219s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/launch/cartographer_locate.launch.py
+[0.219s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/launch/cartographer_map.launch.py
+[0.220s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/ament_index/resource_index/package_run_dependencies/water_tank_cartographer
+[0.220s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/ament_index/resource_index/parent_prefix_path/water_tank_cartographer
+[0.220s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/environment/ament_prefix_path.sh
+[0.220s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/environment/ament_prefix_path.dsv
+[0.220s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/environment/path.sh
+[0.221s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/environment/path.dsv
+[0.221s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/local_setup.bash
+[0.221s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/local_setup.sh
+[0.221s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/local_setup.zsh
+[0.221s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/local_setup.dsv
+[0.221s] -- Symlinking: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.dsv
+[0.229s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/ament_index/resource_index/packages/water_tank_cartographer
+[0.230s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/cmake/water_tank_cartographerConfig.cmake
+[0.230s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/cmake/water_tank_cartographerConfig-version.cmake
+[0.230s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.xml
+[0.257s] Invoked command in '/home/jack/water_tank_ws/build/water_tank_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_cartographer

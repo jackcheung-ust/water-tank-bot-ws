@@ -1,0 +1,33 @@
+[0.016s] Invoking command in '/home/jack/water_tank_ws/build/water_tank_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_navigation -- -j20 -l20
+[0.194s] Invoked command in '/home/jack/water_tank_ws/build/water_tank_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_navigation -- -j20 -l20
+[0.202s] Invoking command in '/home/jack/water_tank_ws/build/water_tank_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_navigation
+[0.209s] -- Install configuration: ""
+[0.209s] -- Execute custom install script
+[0.210s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/bt_navigator.yaml
+[0.210s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/planner_server.yaml
+[0.211s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/recovery.yaml
+[0.211s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/nav.yaml
+[0.211s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/nav_world_time.yaml
+[0.211s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/test_config.yaml
+[0.212s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/turtlebot3.yaml
+[0.212s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation.launch.py
+[0.212s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation_launch.launch.py
+[0.213s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/map_server_params.yaml
+[0.214s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.pgm
+[0.214s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.yaml
+[0.215s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/package_run_dependencies/water_tank_navigation
+[0.215s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/parent_prefix_path/water_tank_navigation
+[0.216s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/ament_prefix_path.sh
+[0.216s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/ament_prefix_path.dsv
+[0.216s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/path.sh
+[0.217s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/path.dsv
+[0.218s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.bash
+[0.218s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.sh
+[0.218s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.zsh
+[0.219s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.dsv
+[0.219s] -- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.dsv
+[0.232s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/packages/water_tank_navigation
+[0.234s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/cmake/water_tank_navigationConfig.cmake
+[0.234s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/cmake/water_tank_navigationConfig-version.cmake
+[0.234s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.xml
+[0.267s] Invoked command in '/home/jack/water_tank_ws/build/water_tank_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_navigation

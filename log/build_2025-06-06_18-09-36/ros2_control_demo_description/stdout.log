@@ -1,0 +1,39 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jack/water_tank_ws/build/ros2_control_demo_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot.materials.xacro
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot_description.urdf.xacro
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot.rviz
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot_view.rviz
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_description
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_description
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.sh
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.dsv
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.sh
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.dsv
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.bash
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.sh
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.zsh
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.dsv
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/packages/ros2_control_demo_description
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig.cmake
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig-version.cmake
+-- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.xml

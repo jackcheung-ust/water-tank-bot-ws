@@ -1,0 +1,4 @@
+source;share/water_tank_navigation/local_setup.bash
+source;share/water_tank_navigation/local_setup.dsv
+source;share/water_tank_navigation/local_setup.sh
+source;share/water_tank_navigation/local_setup.zsh

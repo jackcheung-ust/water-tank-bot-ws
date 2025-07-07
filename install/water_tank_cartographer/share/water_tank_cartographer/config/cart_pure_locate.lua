@@ -1,0 +1,1 @@
+/home/jack/water_tank_ws/src/water_tank_cartographer/config/cart_pure_locate.lua

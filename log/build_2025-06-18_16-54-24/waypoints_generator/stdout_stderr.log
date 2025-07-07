@@ -1,0 +1,13 @@
+running develop
+running egg_info
+writing waypoints_generator.egg-info/PKG-INFO
+writing dependency_links to waypoints_generator.egg-info/dependency_links.txt
+writing requirements to waypoints_generator.egg-info/requires.txt
+writing top-level names to waypoints_generator.egg-info/top_level.txt
+reading manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+writing manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages/waypoints-generator.egg-link (link to .)
+
+Installed /home/jack/water_tank_ws/build/waypoints_generator
+running symlink_data

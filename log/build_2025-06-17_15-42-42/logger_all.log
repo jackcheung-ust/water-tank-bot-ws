@@ -1,0 +1,517 @@
+[0.082s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.082s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7306c4595190>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7306c4538e60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7306c4538e60>>, mixin_verb=('build',))
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.114s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jack/water_tank_ws'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_2) by extension 'ros'
+[0.140s] DEBUG:colcon.colcon_core.package_identification:Package 'src/example_2' with type 'ros.ament_cmake' and name 'ros2_control_demo_example_2'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/rf2o_laser_odometry) by extension 'ros'
+[0.141s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rf2o_laser_odometry' with type 'ros.ament_cmake' and name 'rf2o_laser_odometry'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_control_demo_description) by extension 'ros'
+[0.141s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_control_demo_description' with type 'ros.ament_cmake' and name 'ros2_control_demo_description'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/rplidar_ros) by extension 'ros'
+[0.142s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rplidar_ros' with type 'ros.ament_cmake' and name 'rplidar_ros'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_cartographer) by extension 'ros'
+[0.142s] DEBUG:colcon.colcon_core.package_identification:Package 'src/water_tank_cartographer' with type 'ros.ament_cmake' and name 'water_tank_cartographer'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(src/water_tank_navigation) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/water_tank_navigation' with type 'ros.ament_cmake' and name 'water_tank_navigation'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoints_generator) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/waypoints_generator' with type 'ros.ament_python' and name 'waypoints_generator'
+[0.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.143s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.157s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.158s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/jack/water_tank_ws/install
+[0.159s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 426 installed packages in /opt/ros/jazzy
+[0.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_cache' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_clean_first' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'cmake_force_configure' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'ament_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rf2o_laser_odometry' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.196s] DEBUG:colcon.colcon_core.verb:Building package 'rf2o_laser_odometry' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/rf2o_laser_odometry', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/rf2o_laser_odometry', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/rf2o_laser_odometry', 'symlink_install': True, 'test_result_base': None}
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_target' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.196s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_control_demo_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/ros2_control_demo_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/ros2_control_demo_description', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/ros2_control_demo_description', 'symlink_install': True, 'test_result_base': None}
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'rplidar_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.196s] DEBUG:colcon.colcon_core.verb:Building package 'rplidar_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/rplidar_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/rplidar_ros', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/rplidar_ros', 'symlink_install': True, 'test_result_base': None}
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_target' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_clean_first' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'cmake_force_configure' from command line to 'False'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'ament_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.196s] Level 5:colcon.colcon_core.verb:set package 'water_tank_cartographer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.196s] DEBUG:colcon.colcon_core.verb:Building package 'water_tank_cartographer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/water_tank_cartographer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/water_tank_cartographer', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/water_tank_cartographer', 'symlink_install': True, 'test_result_base': None}
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_args' from command line to 'None'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_target' from command line to 'None'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_clean_first' from command line to 'False'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'cmake_force_configure' from command line to 'False'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'ament_cmake_args' from command line to 'None'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.197s] Level 5:colcon.colcon_core.verb:set package 'water_tank_navigation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.197s] DEBUG:colcon.colcon_core.verb:Building package 'water_tank_navigation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/water_tank_navigation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/water_tank_navigation', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/water_tank_navigation', 'symlink_install': True, 'test_result_base': None}
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_target' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_clean_first' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'cmake_force_configure' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'ament_cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'waypoints_generator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.198s] DEBUG:colcon.colcon_core.verb:Building package 'waypoints_generator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/waypoints_generator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/waypoints_generator', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/waypoints_generator', 'symlink_install': True, 'test_result_base': None}
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_target' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_clean_first' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'cmake_force_configure' from command line to 'False'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'ament_cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.198s] Level 5:colcon.colcon_core.verb:set package 'ros2_control_demo_example_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.198s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_control_demo_example_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jack/water_tank_ws/build/ros2_control_demo_example_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jack/water_tank_ws/install/ros2_control_demo_example_2', 'merge_install': False, 'path': '/home/jack/water_tank_ws/src/example_2', 'symlink_install': True, 'test_result_base': None}
+[0.198s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.199s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.199s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/ros2_control_demo_description' with build type 'ament_cmake'
+[0.199s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/ros2_control_demo_description'
+[0.201s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.201s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.201s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.205s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/rf2o_laser_odometry' with build type 'ament_cmake'
+[0.205s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/rf2o_laser_odometry'
+[0.205s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.205s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.208s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/rplidar_ros' with build type 'ament_cmake'
+[0.208s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/rplidar_ros'
+[0.208s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.208s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.211s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/water_tank_cartographer' with build type 'ament_cmake'
+[0.211s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/water_tank_cartographer'
+[0.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.214s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/water_tank_navigation' with build type 'ament_cmake'
+[0.214s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/water_tank_navigation'
+[0.214s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.214s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.220s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jack/water_tank_ws/src/waypoints_generator' with build type 'ament_python'
+[0.220s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoints_generator', 'ament_prefix_path')
+[0.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/ament_prefix_path.ps1'
+[0.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/ament_prefix_path.dsv'
+[0.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/ament_prefix_path.sh'
+[0.221s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.221s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.227s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_description -- -j20 -l20
+[0.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/rf2o_laser_odometry -- -j20 -l20
+[0.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/rplidar_ros -- -j20 -l20
+[0.232s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/water_tank_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_cartographer -- -j20 -l20
+[0.234s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/water_tank_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_navigation -- -j20 -l20
+[0.446s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jack/water_tank_ws/src/waypoints_generator'
+[0.446s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.446s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_description -- -j20 -l20
+[0.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_description
+[0.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/water_tank_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_navigation -- -j20 -l20
+[0.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/water_tank_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_navigation
+[0.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/rf2o_laser_odometry -- -j20 -l20
+[0.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/rf2o_laser_odometry': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/rf2o_laser_odometry
+[0.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/water_tank_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/water_tank_cartographer -- -j20 -l20
+[0.463s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/water_tank_cartographer': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_cartographer
+[0.464s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/rplidar_ros -- -j20 -l20
+[0.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/rplidar_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/rplidar_ros
+[0.512s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_description)
+[0.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_description
+[0.524s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description' for CMake module files
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description' for CMake config files
+[0.525s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_description', 'cmake_prefix_path')
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.dsv'
+[0.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.sh'
+[0.528s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/bin'
+[0.528s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/lib/pkgconfig/ros2_control_demo_description.pc'
+[0.528s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/lib/python3.12/site-packages'
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/bin'
+[0.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.ps1'
+[0.530s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.sh'
+[0.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.bash'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.zsh'
+[0.540s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/ros2_control_demo_description/share/colcon-core/packages/ros2_control_demo_description)
+[0.541s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_description)
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description' for CMake module files
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description' for CMake config files
+[0.543s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_description', 'cmake_prefix_path')
+[0.543s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.ps1'
+[0.543s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.dsv'
+[0.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/hook/cmake_prefix_path.sh'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/bin'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/lib/pkgconfig/ros2_control_demo_description.pc'
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/lib/python3.12/site-packages'
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_description/bin'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.ps1'
+[0.546s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv'
+[0.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.sh'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.bash'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.zsh'
+[0.548s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/ros2_control_demo_description/share/colcon-core/packages/ros2_control_demo_description)
+[0.549s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jack/water_tank_ws/src/example_2' with build type 'ament_cmake'
+[0.549s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jack/water_tank_ws/src/example_2'
+[0.549s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.549s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.556s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(water_tank_cartographer)
+[0.556s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer' for CMake module files
+[0.557s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/water_tank_cartographer' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_cartographer
+[0.557s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer' for CMake config files
+[0.557s] Level 1:colcon.colcon_core.shell:create_environment_hook('water_tank_cartographer', 'cmake_prefix_path')
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.ps1'
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.dsv'
+[0.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.sh'
+[0.558s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/bin'
+[0.558s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/lib/pkgconfig/water_tank_cartographer.pc'
+[0.558s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/lib/python3.12/site-packages'
+[0.558s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/bin'
+[0.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.ps1'
+[0.559s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.dsv'
+[0.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.sh'
+[0.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.bash'
+[0.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.zsh'
+[0.560s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/water_tank_cartographer/share/colcon-core/packages/water_tank_cartographer)
+[0.560s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(water_tank_cartographer)
+[0.560s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer' for CMake module files
+[0.561s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer' for CMake config files
+[0.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('water_tank_cartographer', 'cmake_prefix_path')
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.ps1'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.dsv'
+[0.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/hook/cmake_prefix_path.sh'
+[0.562s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/bin'
+[0.562s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/lib/pkgconfig/water_tank_cartographer.pc'
+[0.562s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/lib/python3.12/site-packages'
+[0.562s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_cartographer/bin'
+[0.562s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.ps1'
+[0.562s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.dsv'
+[0.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.sh'
+[0.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.bash'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_cartographer/share/water_tank_cartographer/package.zsh'
+[0.564s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/water_tank_cartographer/share/colcon-core/packages/water_tank_cartographer)
+[0.564s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[0.564s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry' for CMake module files
+[0.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/rf2o_laser_odometry' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/rf2o_laser_odometry
+[0.565s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry' for CMake config files
+[0.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[0.566s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[0.567s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[0.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[0.568s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/bin'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib/python3.12/site-packages'
+[0.569s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/bin'
+[0.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[0.570s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[0.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[0.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[0.572s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[0.572s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[0.573s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rf2o_laser_odometry)
+[0.573s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry' for CMake module files
+[0.573s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry' for CMake config files
+[0.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('rf2o_laser_odometry', 'cmake_prefix_path')
+[0.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.ps1'
+[0.574s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.dsv'
+[0.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/hook/cmake_prefix_path.sh'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/bin'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib/pkgconfig/rf2o_laser_odometry.pc'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/lib/python3.12/site-packages'
+[0.575s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rf2o_laser_odometry/bin'
+[0.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.ps1'
+[0.576s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.dsv'
+[0.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.sh'
+[0.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.bash'
+[0.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/rf2o_laser_odometry/package.zsh'
+[0.577s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/rf2o_laser_odometry/share/colcon-core/packages/rf2o_laser_odometry)
+[0.577s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(water_tank_navigation)
+[0.577s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation' for CMake module files
+[0.578s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/water_tank_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/water_tank_navigation
+[0.578s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation' for CMake config files
+[0.578s] Level 1:colcon.colcon_core.shell:create_environment_hook('water_tank_navigation', 'cmake_prefix_path')
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.ps1'
+[0.578s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.dsv'
+[0.579s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.sh'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/bin'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/lib/pkgconfig/water_tank_navigation.pc'
+[0.579s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/lib/python3.12/site-packages'
+[0.580s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/bin'
+[0.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.ps1'
+[0.580s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.dsv'
+[0.580s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.sh'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.bash'
+[0.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.zsh'
+[0.581s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/water_tank_navigation/share/colcon-core/packages/water_tank_navigation)
+[0.582s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(water_tank_navigation)
+[0.582s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation' for CMake module files
+[0.582s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation' for CMake config files
+[0.582s] Level 1:colcon.colcon_core.shell:create_environment_hook('water_tank_navigation', 'cmake_prefix_path')
+[0.582s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.ps1'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.dsv'
+[0.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/hook/cmake_prefix_path.sh'
+[0.583s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/bin'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/lib/pkgconfig/water_tank_navigation.pc'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/lib/python3.12/site-packages'
+[0.584s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/water_tank_navigation/bin'
+[0.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.ps1'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.dsv'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.sh'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.bash'
+[0.585s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.zsh'
+[0.586s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/water_tank_navigation/share/colcon-core/packages/water_tank_navigation)
+[0.586s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[0.586s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros' for CMake module files
+[0.587s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros' for CMake config files
+[0.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/rplidar_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/rplidar_ros
+[0.588s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[0.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[0.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[0.588s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/bin'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/bin'
+[0.589s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[0.590s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[0.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[0.591s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[0.591s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rplidar_ros)
+[0.591s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros' for CMake module files
+[0.592s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros' for CMake config files
+[0.592s] Level 1:colcon.colcon_core.shell:create_environment_hook('rplidar_ros', 'cmake_prefix_path')
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.ps1'
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.dsv'
+[0.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/hook/cmake_prefix_path.sh'
+[0.608s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib'
+[0.608s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/bin'
+[0.608s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib/pkgconfig/rplidar_ros.pc'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/lib/python3.12/site-packages'
+[0.609s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/rplidar_ros/bin'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.ps1'
+[0.609s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.dsv'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.sh'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.bash'
+[0.610s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/rplidar_ros/share/rplidar_ros/package.zsh'
+[0.610s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/rplidar_ros/share/colcon-core/packages/rplidar_ros)
+[0.613s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_example_2': CMAKE_PREFIX_PATH=/home/jack/water_tank_ws/install/ros2_control_demo_description:/home/jack/water_tank_ws/install/water_tank_navigation:/home/jack/water_tank_ws/install/water_tank_cartographer:/home/jack/water_tank_ws/install/rplidar_ros:/home/jack/water_tank_ws/install/ros2_control_demo_example_2:/home/jack/water_tank_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_example_2 -- -j20 -l20
+[0.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_example_2' returned '0': CMAKE_PREFIX_PATH=/home/jack/water_tank_ws/install/ros2_control_demo_description:/home/jack/water_tank_ws/install/water_tank_navigation:/home/jack/water_tank_ws/install/water_tank_cartographer:/home/jack/water_tank_ws/install/rplidar_ros:/home/jack/water_tank_ws/install/ros2_control_demo_example_2:/home/jack/water_tank_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_example_2 -- -j20 -l20
+[0.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_example_2': CMAKE_PREFIX_PATH=/home/jack/water_tank_ws/install/ros2_control_demo_description:/home/jack/water_tank_ws/install/water_tank_navigation:/home/jack/water_tank_ws/install/water_tank_cartographer:/home/jack/water_tank_ws/install/rplidar_ros:/home/jack/water_tank_ws/install/ros2_control_demo_example_2:/home/jack/water_tank_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_example_2
+[0.701s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_example_2)
+[0.701s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2' for CMake module files
+[0.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_example_2' returned '0': CMAKE_PREFIX_PATH=/home/jack/water_tank_ws/install/ros2_control_demo_description:/home/jack/water_tank_ws/install/water_tank_navigation:/home/jack/water_tank_ws/install/water_tank_cartographer:/home/jack/water_tank_ws/install/rplidar_ros:/home/jack/water_tank_ws/install/ros2_control_demo_example_2:/home/jack/water_tank_ws/install/rf2o_laser_odometry:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_example_2
+[0.702s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2' for CMake config files
+[0.703s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_2', 'cmake_prefix_path')
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.ps1'
+[0.703s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.dsv'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.sh'
+[0.704s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib'
+[0.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_2', 'ld_library_path_lib')
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.ps1'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.sh'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/bin'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib/pkgconfig/ros2_control_demo_example_2.pc'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib/python3.12/site-packages'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/bin'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.ps1'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.sh'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/colcon-core/packages/ros2_control_demo_example_2)
+[0.709s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_control_demo_example_2)
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2' for CMake module files
+[0.709s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2' for CMake config files
+[0.709s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_2', 'cmake_prefix_path')
+[0.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.dsv'
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/cmake_prefix_path.sh'
+[0.710s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib'
+[0.710s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_control_demo_example_2', 'ld_library_path_lib')
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.ps1'
+[0.710s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.dsv'
+[0.711s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/hook/ld_library_path_lib.sh'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/bin'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib/pkgconfig/ros2_control_demo_example_2.pc'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/lib/python3.12/site-packages'
+[0.711s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/bin'
+[0.711s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.ps1'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.dsv'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.sh'
+[0.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.bash'
+[0.713s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/ros2_control_demo_example_2/package.zsh'
+[0.713s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/ros2_control_demo_example_2/share/colcon-core/packages/ros2_control_demo_example_2)
+[0.975s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jack/water_tank_ws/build/waypoints_generator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data
+[1.460s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoints_generator', 'pythonpath_develop')
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/build/waypoints_generator/share/waypoints_generator/hook/pythonpath_develop.ps1'
+[1.460s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jack/water_tank_ws/build/waypoints_generator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data
+[1.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/build/waypoints_generator/share/waypoints_generator/hook/pythonpath_develop.dsv'
+[1.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/build/waypoints_generator/share/waypoints_generator/hook/pythonpath_develop.sh'
+[1.461s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator' for CMake module files
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator' for CMake config files
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator/lib'
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator/bin'
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator/lib/pkgconfig/waypoints_generator.pc'
+[1.462s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages'
+[1.462s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoints_generator', 'pythonpath')
+[1.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/pythonpath.ps1'
+[1.462s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/pythonpath.dsv'
+[1.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/hook/pythonpath.sh'
+[1.463s] Level 1:colcon.colcon_core.environment:checking '/home/jack/water_tank_ws/install/waypoints_generator/bin'
+[1.463s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(waypoints_generator)
+[1.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/package.ps1'
+[1.464s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/package.dsv'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/package.sh'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/package.bash'
+[1.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/jack/water_tank_ws/install/waypoints_generator/share/waypoints_generator/package.zsh'
+[1.465s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jack/water_tank_ws/install/waypoints_generator/share/colcon-core/packages/waypoints_generator)
+[1.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.466s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.471s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.471s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.471s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.483s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.484s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jack/water_tank_ws/install/local_setup.ps1'
+[1.484s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jack/water_tank_ws/install/_local_setup_util_ps1.py'
+[1.485s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jack/water_tank_ws/install/setup.ps1'
+[1.486s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jack/water_tank_ws/install/local_setup.sh'
+[1.487s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jack/water_tank_ws/install/_local_setup_util_sh.py'
+[1.487s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jack/water_tank_ws/install/setup.sh'
+[1.488s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jack/water_tank_ws/install/local_setup.bash'
+[1.489s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jack/water_tank_ws/install/setup.bash'
+[1.489s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jack/water_tank_ws/install/local_setup.zsh'
+[1.490s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jack/water_tank_ws/install/setup.zsh'

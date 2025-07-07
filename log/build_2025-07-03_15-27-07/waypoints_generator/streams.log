@@ -1,0 +1,17 @@
+[0.829s] Invoking command in '/home/jack/water_tank_ws/build/waypoints_generator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data
+[1.114s] running develop
+[1.260s] running egg_info
+[1.274s] writing waypoints_generator.egg-info/PKG-INFO
+[1.274s] writing dependency_links to waypoints_generator.egg-info/dependency_links.txt
+[1.274s] writing entry points to waypoints_generator.egg-info/entry_points.txt
+[1.274s] writing requirements to waypoints_generator.egg-info/requires.txt
+[1.274s] writing top-level names to waypoints_generator.egg-info/top_level.txt
+[1.305s] reading manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+[1.306s] writing manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+[1.320s] running build_ext
+[1.321s] Creating /home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages/waypoints-generator.egg-link (link to .)
+[1.321s] Installing waypoints_generator script to /home/jack/water_tank_ws/install/waypoints_generator/lib/waypoints_generator
+[1.321s] 
+[1.321s] Installed /home/jack/water_tank_ws/build/waypoints_generator
+[1.322s] running symlink_data
+[1.352s] Invoked command in '/home/jack/water_tank_ws/build/waypoints_generator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data

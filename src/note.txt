@@ -1,0 +1,20 @@
+##install xacro 
+sudo apt install ros-jazzy-xacro
+
+##install joint state publisher 
+sudo apt install ros-jazzy-joint-state-publisher
+
+#teleop command
+ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -p stamped:=true
+
+#rqt viewer
+ ros2 run rqt_tf_tree rqt_tf_tree --force-discover
+ ros2 run rqt_tf_tree rqt_tf_tree
+
+# 
+colcon build --symlink-install
+
+
+ros2 run nav2_map_server map_server --ros-args --params-file map_server_params.yaml
+ros2 lifecycle set /map_server configure
+ros2 lifecycle set /map_server activate

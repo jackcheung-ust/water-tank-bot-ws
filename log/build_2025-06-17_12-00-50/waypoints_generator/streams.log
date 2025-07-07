@@ -1,0 +1,15 @@
+[0.642s] Invoking command in '/home/jack/water_tank_ws/build/waypoints_generator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data
+[0.875s] running develop
+[1.007s] running egg_info
+[1.020s] writing waypoints_generator.egg-info/PKG-INFO
+[1.020s] writing dependency_links to waypoints_generator.egg-info/dependency_links.txt
+[1.021s] writing requirements to waypoints_generator.egg-info/requires.txt
+[1.021s] writing top-level names to waypoints_generator.egg-info/top_level.txt
+[1.047s] reading manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+[1.047s] writing manifest file 'waypoints_generator.egg-info/SOURCES.txt'
+[1.062s] running build_ext
+[1.062s] Creating /home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages/waypoints-generator.egg-link (link to .)
+[1.062s] 
+[1.062s] Installed /home/jack/water_tank_ws/build/waypoints_generator
+[1.062s] running symlink_data
+[1.086s] Invoked command in '/home/jack/water_tank_ws/build/waypoints_generator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/waypoints_generator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/waypoints_generator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/waypoints_generator/build --no-deps symlink_data

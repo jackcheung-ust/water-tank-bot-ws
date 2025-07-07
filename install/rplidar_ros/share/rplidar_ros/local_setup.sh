@@ -1,0 +1,1 @@
+/home/jack/water_tank_ws/build/rplidar_ros/ament_cmake_environment_hooks/local_setup.sh

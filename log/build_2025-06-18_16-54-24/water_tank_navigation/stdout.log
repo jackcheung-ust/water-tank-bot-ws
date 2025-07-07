@@ -1,0 +1,29 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/bt_navigator.yaml
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/planner_server.yaml
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/bot_config/recovery.yaml
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/nav.yaml
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/nav_world_time.yaml
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/test_config.yaml
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/config/turtlebot3.yaml
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation.launch.py
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation_launch.launch.py
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/map_server_params.yaml
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.pgm
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.yaml
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/package_run_dependencies/water_tank_navigation
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/parent_prefix_path/water_tank_navigation
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/path.sh
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/environment/path.dsv
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.bash
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.sh
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.zsh
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/local_setup.dsv
+-- Symlinking: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.dsv
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/packages/water_tank_navigation
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/cmake/water_tank_navigationConfig.cmake
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/cmake/water_tank_navigationConfig-version.cmake
+-- Up-to-date symlink: /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/package.xml

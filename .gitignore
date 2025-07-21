@@ -1,0 +1,38 @@
+# VSCode database files
+**/.vscode/browse.vc.db
+**/.vscode/browse.vc.db-*
+
+# Build directories
+build/
+install/
+log/
+
+# VSCode settings (optional - you may want to keep some)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/.ropeproject
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ROS2 specific
+*.bag
+*.bag.*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*~
+*.swp
+*.swo

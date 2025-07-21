@@ -1,0 +1,22 @@
+[0.794s] Invoking command in '/home/jack/water_tank_ws/build/water_bot_task_navigator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/water_bot_task_navigator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/water_bot_task_navigator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/water_bot_task_navigator/build --no-deps symlink_data
+[0.995s] running develop
+[1.115s] running egg_info
+[1.115s] creating water_bot_task_navigator.egg-info
+[1.126s] writing water_bot_task_navigator.egg-info/PKG-INFO
+[1.126s] writing dependency_links to water_bot_task_navigator.egg-info/dependency_links.txt
+[1.127s] writing requirements to water_bot_task_navigator.egg-info/requires.txt
+[1.127s] writing top-level names to water_bot_task_navigator.egg-info/top_level.txt
+[1.127s] writing manifest file 'water_bot_task_navigator.egg-info/SOURCES.txt'
+[1.149s] reading manifest file 'water_bot_task_navigator.egg-info/SOURCES.txt'
+[1.150s] writing manifest file 'water_bot_task_navigator.egg-info/SOURCES.txt'
+[1.161s] running build_ext
+[1.161s] Creating /home/jack/water_tank_ws/install/water_bot_task_navigator/lib/python3.12/site-packages/water-bot-task-navigator.egg-link (link to .)
+[1.162s] 
+[1.162s] Installed /home/jack/water_tank_ws/build/water_bot_task_navigator
+[1.162s] running symlink_data
+[1.162s] creating /home/jack/water_tank_ws/install/water_bot_task_navigator/share/ament_index
+[1.162s] creating /home/jack/water_tank_ws/install/water_bot_task_navigator/share/ament_index/resource_index
+[1.162s] creating /home/jack/water_tank_ws/install/water_bot_task_navigator/share/ament_index/resource_index/packages
+[1.162s] symbolically linking /home/jack/water_tank_ws/build/water_bot_task_navigator/resource/water_bot_task_navigator -> /home/jack/water_tank_ws/install/water_bot_task_navigator/share/ament_index/resource_index/packages
+[1.162s] symbolically linking /home/jack/water_tank_ws/build/water_bot_task_navigator/package.xml -> /home/jack/water_tank_ws/install/water_bot_task_navigator/share/water_bot_task_navigator
+[1.184s] Invoked command in '/home/jack/water_tank_ws/build/water_bot_task_navigator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jack/water_tank_ws/build/water_bot_task_navigator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jack/water_tank_ws/install/water_bot_task_navigator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jack/water_tank_ws/build/water_bot_task_navigator/build --no-deps symlink_data

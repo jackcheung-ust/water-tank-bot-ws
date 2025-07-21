@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing water_bot_task_navigator.egg-info/PKG-INFO
+writing dependency_links to water_bot_task_navigator.egg-info/dependency_links.txt
+writing entry points to water_bot_task_navigator.egg-info/entry_points.txt
+writing requirements to water_bot_task_navigator.egg-info/requires.txt
+writing top-level names to water_bot_task_navigator.egg-info/top_level.txt
+reading manifest file 'water_bot_task_navigator.egg-info/SOURCES.txt'
+writing manifest file 'water_bot_task_navigator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/jack/water_tank_ws/install/water_bot_task_navigator/lib/python3.12/site-packages/water-bot-task-navigator.egg-link (link to .)
+Installing water_bot_task_navigator script to /home/jack/water_tank_ws/install/water_bot_task_navigator/lib/water_bot_task_navigator
+
+Installed /home/jack/water_tank_ws/build/water_bot_task_navigator
+running symlink_data

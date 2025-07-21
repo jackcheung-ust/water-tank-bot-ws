@@ -1,0 +1,9 @@
+source;share/water_bot_task_navigator/hook/pythonpath.ps1
+source;share/water_bot_task_navigator/hook/pythonpath.dsv
+source;share/water_bot_task_navigator/hook/pythonpath.sh
+source;share/water_bot_task_navigator/hook/ament_prefix_path.ps1
+source;share/water_bot_task_navigator/hook/ament_prefix_path.dsv
+source;share/water_bot_task_navigator/hook/ament_prefix_path.sh
+source;../../build/water_bot_task_navigator/share/water_bot_task_navigator/hook/pythonpath_develop.ps1
+source;../../build/water_bot_task_navigator/share/water_bot_task_navigator/hook/pythonpath_develop.dsv
+source;../../build/water_bot_task_navigator/share/water_bot_task_navigator/hook/pythonpath_develop.sh

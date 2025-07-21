@@ -8,6 +8,7 @@
 /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation.launch.py
 /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/launch/navigation_launch.launch.py
 /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/map_server_params.yaml
+/home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/test_screenshot_04.07.2025.png
 /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.pgm
 /home/jack/water_tank_ws/install/water_tank_navigation/share/water_tank_navigation/map/testing_map.yaml
 /home/jack/water_tank_ws/install/water_tank_navigation/share/ament_index/resource_index/package_run_dependencies/water_tank_navigation

@@ -1,0 +1,25 @@
+[0.024s] Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_description -- -j20 -l20
+[0.173s] Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/ros2_control_demo_description -- -j20 -l20
+[0.182s] Invoking command in '/home/jack/water_tank_ws/build/ros2_control_demo_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_description
+[0.350s] -- Install configuration: ""
+[0.350s] -- Execute custom install script
+[0.351s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot.materials.xacro
+[0.351s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/urdf/diffbot_description.urdf.xacro
+[0.351s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot.rviz
+[0.351s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/diffbot/rviz/diffbot_view.rviz
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/package_run_dependencies/ros2_control_demo_description
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/parent_prefix_path/ros2_control_demo_description
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.sh
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/ament_prefix_path.dsv
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.sh
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/environment/path.dsv
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.bash
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.sh
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.zsh
+[0.352s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/local_setup.dsv
+[0.353s] -- Symlinking: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.dsv
+[0.353s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ament_index/resource_index/packages/ros2_control_demo_description
+[0.353s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig.cmake
+[0.353s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/cmake/ros2_control_demo_descriptionConfig-version.cmake
+[0.353s] -- Up-to-date symlink: /home/jack/water_tank_ws/install/ros2_control_demo_description/share/ros2_control_demo_description/package.xml
+[0.361s] Invoked command in '/home/jack/water_tank_ws/build/ros2_control_demo_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/ros2_control_demo_description

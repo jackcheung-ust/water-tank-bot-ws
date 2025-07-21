@@ -126,23 +126,23 @@ hardware_interface::CallbackReturn DiffBotSystemHardware::on_configure(
 hardware_interface::CallbackReturn DiffBotSystemHardware::on_activate(
   const rclcpp_lifecycle::State & /*previous_state*/)
 {
-  // BEGIN: This part here is for exemplary purposes - Please do not copy to your production code
-  RCLCPP_INFO(get_logger(), "Activating ...please wait...");
+  // // BEGIN: This part here is for exemplary purposes - Please do not copy to your production code
+  // RCLCPP_INFO(get_logger(), "Activating ...please wait...");
 
-  for (auto i = 0; i < hw_start_sec_; i++)
-  {
-    rclcpp::sleep_for(std::chrono::seconds(1));
-    RCLCPP_INFO(get_logger(), "%.1f seconds left...", hw_start_sec_ - i);
-  }
-  // END: This part here is for exemplary purposes - Please do not copy to your production code
+  // for (auto i = 0; i < hw_start_sec_; i++)
+  // {
+  //   rclcpp::sleep_for(std::chrono::seconds(1));
+  //   RCLCPP_INFO(get_logger(), "%.1f seconds left...", hw_start_sec_ - i);
+  // }
+  // // END: This part here is for exemplary purposes - Please do not copy to your production code
 
-  // command and state should be equal when starting
-  for (const auto & [name, descr] : joint_command_interfaces_)
-  {
-    set_command(name, get_state(name));
-  }
+  // // command and state should be equal when starting
+  // for (const auto & [name, descr] : joint_command_interfaces_)
+  // {
+  //   set_command(name, get_state(name));
+  // }
 
-  RCLCPP_INFO(get_logger(), "Successfully activated!");
+  // RCLCPP_INFO(get_logger(), "Successfully activated!");
 
   return hardware_interface::CallbackReturn::SUCCESS;
 }
@@ -169,26 +169,26 @@ hardware_interface::return_type DiffBotSystemHardware::read(
   const rclcpp::Time & /*time*/, const rclcpp::Duration & period)
 {
   // BEGIN: This part here is for exemplary purposes - Please do not copy to your production code
-  std::stringstream ss;
-  ss << "Reading states:";
-  ss << std::fixed << std::setprecision(2);
-  for (const auto & [name, descr] : joint_state_interfaces_)
-  {
-    if (descr.get_interface_name() == hardware_interface::HW_IF_POSITION)
-    {
-      // Simulate DiffBot wheels's movement as a first-order system
-      // Update the joint status: this is a revolute joint without any limit.
-      // Simply integrates
-      auto velo = get_command(descr.get_prefix_name() + "/" + hardware_interface::HW_IF_VELOCITY);
-      set_state(name, get_state(name) + period.seconds() * velo);
+  // std::stringstream ss;
+  // ss << "Reading states:";
+  // ss << std::fixed << std::setprecision(2);
+  // for (const auto & [name, descr] : joint_state_interfaces_)
+  // {
+  //   if (descr.get_interface_name() == hardware_interface::HW_IF_POSITION)
+  //   {
+  //     // Simulate DiffBot wheels's movement as a first-order system
+  //     // Update the joint status: this is a revolute joint without any limit.
+  //     // Simply integrates
+  //     auto velo = get_command(descr.get_prefix_name() + "/" + hardware_interface::HW_IF_VELOCITY);
+  //     set_state(name, get_state(name) + period.seconds() * velo);
 
-      ss << std::endl
-         << "\t position " << get_state(name) << " and velocity " << velo << " for '" << name
-         << "'!";
-    }
-  }
-  RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
-  // END: This part here is for exemplary purposes - Please do not copy to your production code
+  //     ss << std::endl
+  //        << "\t position " << get_state(name) << " and velocity " << velo << " for '" << name
+  //        << "'!";
+  //   }
+  // }
+  // RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
+  // // END: This part here is for exemplary purposes - Please do not copy to your production code
 
   return hardware_interface::return_type::OK;
 }

@@ -1,4 +1,5 @@
 import math
+import numpy as np 
 
 class Point:
     """
@@ -45,14 +46,34 @@ class Point:
 
 
 
+"""
+1. fix the scan line first 
 
+2. add rotation to make it vertical scan regardless of the map 
+
+3. rotated back acc to the rotation matrix 
+
+"""
 
 class path_generator():
-    def __init__(self,vertics, road_width, safe_distance,step_length):
+    def __init__(self):
+        self.vertics = None
+        self.road_width = 0 
+        self.safe_distance = 0
+        self.step_length = 0
+        self.rotate_M = None 
+
+    def set_vertics(self,vertics):
         self.vertics = vertics
-        self.road_width = road_width 
+    
+    def set_road_width(self,road_width):
+        self.road_width = road_width
+    
+    def set_safe_distance(self,safe_distance):
         self.safe_distance = safe_distance
-        self.step_lenght = step_length
+
+    def set_step_length(self,step_length):
+        self.step_length = step_length
 
     def cal_distance(self,p1:Point,p2:Point)->float:
         distance = (p1.x - p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y)
@@ -61,9 +82,27 @@ class path_generator():
 
     def cal_theta(self,p1:Point, p2:Point):
         # print(p1)
+        if (p2.x - p1.x) == 0:
+            if p2.y - p1.y > 0:
+                return math.atan(float('inf'))
+            else :
+                return math.atan(float('-inf'))
+
         val = (p2.y-p1.y)/(p2.x-p1.x)
 
         return math.atan(val)
+
+    def cal_theta_f_list(self,p1,p2):
+        if (p2[0] - p1[0]) == 0:
+            if p2[1] - p1[1] > 0:
+                return math.atan(float('inf'))
+            else :
+                return math.atan(float('-inf'))
+
+        val = (p2[1]-p1[1])/(p2[0]-p1[0])
+
+        return math.atan(val)
+
 
     def line_intersection(self,p1, p2, p3, p4):
         """
@@ -144,8 +183,8 @@ class path_generator():
             offset_vec_curr = unit_normal_curr * d
             line2_p1 = p_curr + offset_vec_curr
             line2_p2 = p_next + offset_vec_curr
-            print(line1_p1)
-            print(line1_p2)
+            # print(line1_p1)
+            # print(line1_p2)
 
             # The new vertex is the intersection of these two offset lines
             new_vertex = self.line_intersection(line1_p1, line1_p2, line2_p1, line2_p2)
@@ -159,7 +198,44 @@ class path_generator():
         
         # Convert Point objects back to tuples for the output
         return [(p.x, p.y) for p in shrunk_points]
+
+
+    def find_rotation_matrix(self):
+        print("re-arrange the point...")
+        p_A = self.vertics[0]
+        p_B = self.vertics[-1]
+        p_A = Point(p_A[0],p_A[1])
+        p_B = Point(p_B[0],p_B[1])
+        vector = p_B - p_A 
+        vector_normlized = vector.normalize()
+        sin_alpha = vector_normlized.y
+        cos_alpha = vector_normlized.x 
+        print("sin_alpha: ", sin_alpha)
+        print("cos_alpha: ",cos_alpha)
         
+        self.rotation_M = np.array([
+            [sin_alpha, -cos_alpha],
+            [cos_alpha, sin_alpha]
+        ])
+
+    def apply_rotation_m(self):
+        print("cal rotation...")
+        print(self.rotation_M.shape)
+        print("current size of vertics : ")
+        print(len(self.vertics))
+        point_arr = np.array(self.vertics).T
+        # print(point_arr)
+        # print(point_arr.shape)
+        rotated_arr = np.dot(self.rotation_M,point_arr)
+        return rotated_arr.T
+
+    def apply_inv_rotation(self,points):
+        inv_m = np.linalg.inv(self.rotation_M)
+        points = np.array(points).T
+        rotated_arr = np.dot(inv_m,points)
+        return rotated_arr.T
+
+
     def search_intersection_with_gap(self, vertices, gap):
     # print(gap)
         points = [Point(v[0], v[1]) for v in vertices]
@@ -330,7 +406,7 @@ class path_generator():
                     unit_vector = vector.normalize()
                     next_tail = tail + Point(step*unit_vector.x, step*unit_vector.y)
                     next_distance = math.sqrt(self.cal_distance(head,next_tail))
-                    print(next_distance)
+                    # print(next_distance)
                     
                     if next_distance < step:
                         ##check if the next_point too close to the turning
@@ -345,10 +421,30 @@ class path_generator():
         station_list.append(points[-1])
         return  [(p.x, p.y) for p in station_list]
     
-    def generate_path(self):
-        ##generate the inner bound first 
-        inner_vertices = self.inner_bound_vertics(self.vertics,self.safe_distance)
 
+    def append_angle(self,point_list):
+        pt_list = []
+        i = 0 
+        while i<len(point_list):
+            p1 = point_list[i]
+            p2 = point_list[(i+1)%len(point_list)]
+            # angle = math.atan((y2-y1)/(x2-x1))
+            angle = self.cal_theta_f_list(p1,p2)
+            pt_list.append([point_list[i][0],point_list[i][1],angle])
+            i = i + 1 
+
+        return pt_list
+
+
+    def generate_path(self):
+        # Find the rotation matrix apply to all points
+        self.find_rotation_matrix()
+        rotated_points = self.apply_rotation_m()
+        ##generate the inner bound 
+        inner_vertices = self.inner_bound_vertics(rotated_points,self.safe_distance)
+
+        # print(len(inner_vertices))
+        # print(inner_vertices)
         ##found top and bottom cross points 
         top, bot = self.search_intersection_with_gap(inner_vertices,self.road_width)
 
@@ -356,6 +452,11 @@ class path_generator():
         coverage_path = self.shuffle_list(top,bot)
 
         ##add sation points 
-        final_coverage_path = self.add_station_pt(coverage_path,self.step_lenght)
+        coverage_path = self.add_station_pt(coverage_path,self.step_length)
+       
+        final_coverage_path = self.apply_inv_rotation(coverage_path)
 
+        inner_vertices = self.apply_inv_rotation(inner_vertices)
+        final_coverage_path = self.append_angle(final_coverage_path)
+        # print(final_coverage_path[-1])
         return final_coverage_path

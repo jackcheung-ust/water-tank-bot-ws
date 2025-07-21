@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/water_bot_task_navigator
+water_bot_task_navigator/__init__.py
+water_bot_task_navigator/water_bot_task_navigator.py
+water_bot_task_navigator.egg-info/PKG-INFO
+water_bot_task_navigator.egg-info/SOURCES.txt
+water_bot_task_navigator.egg-info/dependency_links.txt
+water_bot_task_navigator.egg-info/entry_points.txt
+water_bot_task_navigator.egg-info/requires.txt
+water_bot_task_navigator.egg-info/top_level.txt
+water_bot_task_navigator.egg-info/zip-safe

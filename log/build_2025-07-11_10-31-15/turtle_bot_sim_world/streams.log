@@ -1,0 +1,54 @@
+[0.023s] Invoking command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jack/water_tank_ws/src/turtle_bot_sim_world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jack/water_tank_ws/install/turtle_bot_sim_world
+[0.173s] -- The C compiler identification is GNU 13.3.0
+[0.173s] -- The CXX compiler identification is GNU 13.3.0
+[0.173s] -- Detecting C compiler ABI info
+[0.256s] -- Detecting C compiler ABI info - done
+[0.262s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.263s] -- Detecting C compile features
+[0.263s] -- Detecting C compile features - done
+[0.271s] -- Detecting CXX compiler ABI info
+[0.352s] -- Detecting CXX compiler ABI info - done
+[0.362s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.362s] -- Detecting CXX compile features
+[0.363s] -- Detecting CXX compile features - done
+[0.369s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.501s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.557s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.597s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.679s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.679s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.679s] -- Added test 'lint_cmake' to check CMake code style
+[0.680s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.681s] -- Added test 'xmllint' to check XML markup files
+[0.683s] -- Configuring done (0.7s)
+[0.684s] -- Generating done (0.0s)
+[0.685s] -- Build files have been written to: /home/jack/water_tank_ws/build/turtle_bot_sim_world
+[0.688s] Invoked command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jack/water_tank_ws/src/turtle_bot_sim_world -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jack/water_tank_ws/install/turtle_bot_sim_world
+[0.689s] Invoking command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/turtle_bot_sim_world -- -j20 -l20
+[0.719s] Invoked command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jack/water_tank_ws/build/turtle_bot_sim_world -- -j20 -l20
+[0.720s] Invoking command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/turtle_bot_sim_world
+[0.727s] -- Install configuration: ""
+[0.727s] -- Execute custom install script
+[0.728s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/models/turtlebot3_world/meshes/hexagon.dae
+[0.734s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/models/turtlebot3_world/meshes/wall.dae
+[0.743s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/models/turtlebot3_world/model-1_4.sdf
+[0.751s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/models/turtlebot3_world/model.config
+[0.761s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/models/turtlebot3_world/model.sdf
+[0.767s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/launch/turtle_bot_test_world.launch.py
+[0.774s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/worlds/turtlebot3_world.world
+[0.780s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/ament_index/resource_index/package_run_dependencies/turtle_bot_sim_world
+[0.789s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/ament_index/resource_index/parent_prefix_path/turtle_bot_sim_world
+[0.796s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/environment/ament_prefix_path.sh
+[0.806s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/environment/ament_prefix_path.dsv
+[0.812s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/environment/path.sh
+[0.819s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/environment/path.dsv
+[0.826s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/local_setup.bash
+[0.835s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/local_setup.sh
+[0.840s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/local_setup.zsh
+[0.848s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/local_setup.dsv
+[0.854s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/package.dsv
+[0.859s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/ament_index/resource_index/packages/turtle_bot_sim_world
+[0.867s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/cmake/turtle_bot_sim_worldConfig.cmake
+[0.872s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/cmake/turtle_bot_sim_worldConfig-version.cmake
+[0.878s] -- Symlinking: /home/jack/water_tank_ws/install/turtle_bot_sim_world/share/turtle_bot_sim_world/package.xml
+[0.885s] Invoked command in '/home/jack/water_tank_ws/build/turtle_bot_sim_world' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jack/water_tank_ws/install/water_bot_task_navigator:/home/jack/water_tank_ws/install/waypoints_generator:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jack/water_tank_ws/build/turtle_bot_sim_world

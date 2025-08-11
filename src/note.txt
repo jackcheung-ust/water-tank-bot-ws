@@ -18,3 +18,23 @@ colcon build --symlink-install
 ros2 run nav2_map_server map_server --ros-args --params-file map_server_params.yaml
 ros2 lifecycle set /map_server configure
 ros2 lifecycle set /map_server activate
+
+1- sudo pinctrl FAN_PWM a0
+2- I put these lines in the boot/firmware/config.txt
+
+#Fan PWM
+dtparam=cooling_fan=on
+dtparam=fan_temp0=50000
+dtparam=fan_temp0_hyst=5000
+dtparam=fan_temp0_speed=75
+dtparam=fan_temp1=60000
+dtparam=fan_temp1_hyst=5000
+dtparam=fan_temp1_speed=125
+dtparam=fan_temp2=67500
+dtparam=fan_temp2_hyst=5000
+dtparam=fan_temp2_speed=175
+dtparam=fan_temp3=75000
+dtparam=fan_temp3_hyst=5000
+dtparam=fan_temp3_speed=250
+
+3- reboot

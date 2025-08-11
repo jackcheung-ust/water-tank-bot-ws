@@ -76,7 +76,7 @@ class waypoints_generator(Node):
         reshape the 1D array into 2D 
         """
 
-      
+        cv2.namedWindow("test", cv2.WINDOW_NORMAL) 
         grid_array = np.array(self.map_data, dtype=np.int8).reshape((self.map_height, self.map_width))
         # print(grid_array)
         map_img = np.full((self.map_height,self.map_width),255,dtype=np.uint8)
@@ -86,8 +86,8 @@ class waypoints_generator(Node):
         # print("size of the contour list : " , len(contours))
         
         self.get_logger().info(f"Size of the contours : {len(contours)}")
-        # img2 = cv2.merge((map_img,map_img,map_img))
-       
+        img2 = cv2.merge((map_img,map_img,map_img))
+        # img2 = cv2.merge((grid_array,grid_array,grid_array))
         for contour in contours :
             peri = cv2.arcLength(contour, True)
             scale_factor = 0.01
@@ -97,13 +97,13 @@ class waypoints_generator(Node):
             print(approx.shape)
             self.get_logger().info(f"Current contour perimeter : {peri}")
             self.get_logger().info(f"Current vertics : {len(approx)}")
-            # cv2.drawContours(img2, contour, -1,(0,255,0),2)
-            # cv2.imshow("test",img2)
-            # cv2.waitKey(0)
+            cv2.drawContours(img2, contour, -1,(0,255,0),2)
+            cv2.imshow("test",img2)
+            cv2.waitKey(0)
 
-            # cv2.drawContours(img2, [approx], -1, (0,0,255),2)
-            # cv2.imshow("test",img2)
-            # cv2.waitKey(0)
+            cv2.drawContours(img2, [approx], -1, (0,0,255),1)
+            cv2.imshow("test",img2)
+            cv2.waitKey(0)
 
         print("x y id : ")
         print(approx)
@@ -118,7 +118,7 @@ class waypoints_generator(Node):
 
         self.path_generator.set_road_width(0.2)
 
-        self.path_generator.set_safe_distance(0.5)
+        self.path_generator.set_safe_distance(0.3)
 
         self.path_generator.set_step_length(0.2)
 

@@ -13,7 +13,6 @@ options = {
 
     publish_frame_projected_to_2d = false,
 
-
     use_odometry = true,                                  -- 是否使用里程计,如果使用要求一定要有odom的tf
     use_nav_sat = false,                                  -- 是否使用gps
     use_landmarks = false,                                -- 是否使用landmark
@@ -36,8 +35,8 @@ options = {
 MAP_BUILDER.use_trajectory_builder_2d = true
 
 TRAJECTORY_BUILDER_2D.use_imu_data = false
--- TRAJECTORY_BUILDER_2D.min_range = 0.3                --laser min_range
--- TRAJECTORY_BUILDER_2D.max_range = 6.                 --laser max_range    
+TRAJECTORY_BUILDER_2D.min_range = 0.3                --laser min_range
+TRAJECTORY_BUILDER_2D.max_range = 6.                 --laser max_range    
 --TRAJECTORY_BUILDER_2D.min_z = 0.2
 --TRAJECTORY_BUILDER_2D.max_z = 1.4
 --TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.02
@@ -64,7 +63,7 @@ TRAJECTORY_BUILDER_2D.real_time_correlative_scan_matcher.rotation_delta_cost_wei
 --TRAJECTORY_BUILDER_2D.imu_gravity_time_constant = 1.
 
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 100.
-TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.1
+TRAJECTORY_BUILDER_2D.submaps.grid_options_2d.resolution = 0.02
 
 POSE_GRAPH.optimize_every_n_nodes = 50.
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.3

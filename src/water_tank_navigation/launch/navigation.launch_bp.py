@@ -15,7 +15,7 @@ def generate_launch_description()-> LaunchDescription:
 
     namespace = LaunchConfiguration('namespace')
     config_dir = get_package_share_directory('water_tank_navigation')
-    use_sim_time = LaunchConfiguration('use_sim_time')
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     use_composition = LaunchConfiguration('use_composition')
     container_name = LaunchConfiguration('container_name')
     container_name_full = (namespace, '/', container_name)
@@ -27,6 +27,7 @@ def generate_launch_description()-> LaunchDescription:
     log_level = LaunchConfiguration('log_level')
 
     lifecycle_nodes = [
+        'amcl',
         'bt_navigator',
         'behavior_server',
         'controller_server',
@@ -60,7 +61,7 @@ def generate_launch_description()-> LaunchDescription:
     )
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
-        'use_sim_time', default_value='False', description='Use simulation (Gazebo) clock if true'
+        'use_sim_time', default_value='True', description='Use simulation (Gazebo) clock if true'
     )
 
     declare_parms_file_cmd = DeclareLaunchArgument(
@@ -81,7 +82,7 @@ def generate_launch_description()-> LaunchDescription:
 
     declare_map_file_cmd = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(config_dir, 'map', 'site_test.yaml'),
+        default_value=os.path.join(config_dir, 'map', 'testing_map.yaml'),
         description='Full path to map file to load',
     )
 
@@ -105,7 +106,17 @@ def generate_launch_description()-> LaunchDescription:
         condition=IfCondition(PythonExpression(['not ', use_composition])),
         actions= [
             SetParameter('use_sim_time', use_sim_time),
-
+            Node(
+                package = 'nav2_amcl', 
+                executable= 'amcl',
+                name = 'amcl',
+                output='screen',
+                respawn=use_respawn,
+                respawn_delay=2.0,
+                parameters=[configured_params],
+                arguments=['--ros-args', '--log-level', log_level],
+                remappings=remappings,
+            ),
             Node(
                 package='nav2_bt_navigator',
                 executable='bt_navigator',
@@ -129,7 +140,6 @@ def generate_launch_description()-> LaunchDescription:
                 respawn=use_respawn,
                 respawn_delay=2.0,
                 parameters=[configured_params, {'yaml_filename': map_file}],
-                # parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings,
             ),
@@ -224,7 +234,15 @@ def generate_launch_description()-> LaunchDescription:
             LoadComposableNodes(
                 target_container=container_name_full,
                 composable_node_descriptions=[
-                   
+                    ComposableNode(
+                        package='nav2_amcl',
+                        plugin='nav2_amcl::AmclNode',
+                        name='amcl',
+                        parameters=[configured_params],
+                        remappings=remappings,
+                        # extra_arguments=[{'use_intra_process_comms': True}],
+                    ),
+
                     ComposableNode(
                         package = 'nav2_bt_navigator',
                         plugin = 'nav2_bt_navigator::BtNavigator',
@@ -241,7 +259,6 @@ def generate_launch_description()-> LaunchDescription:
                         plugin = 'nav2_map_server::MapServer',
                         name = 'map_server',
                         parameters = [configured_params, {'yaml_filename': map_file}],
-                        # parameters = [configured_params],
                         remappings = remappings,
                     ),
 

@@ -79,6 +79,7 @@ class SerialComs {
                 //currently in the water mode, just send heartbeat 
                 // std::cout<<"Sending empty heartbeat..."<<std::endl;
                 send_heartbeat(pack_id);
+                ack_send = false;
                 // std::cout<<"func done"<< std::endl;
             }
             else if (clean_mode_ == 1 or clean_mode_ == 2){
@@ -86,6 +87,8 @@ class SerialComs {
                 if (ack_send != true){
                     send_auto_ack(pack_id);
                     ack_send = true;
+                }else {
+                    send_motor_control(pack_id,l_wheel_v,r_wheel_v);
                 }
             }
 
@@ -414,6 +417,7 @@ class SerialComs {
                 operate_mode_ = unpacked_data[7];
                 left_w_speed_feedback_ = unpacked_data[8] << 8 | unpacked_data[9];
                 right_w_speed_feedback_ = unpacked_data[10] << 8 | unpacked_data[11];
+                clean_mode_ = 0;
                 // roll_ = unpacked_data[12] << 8 | unpacked_data[13];
                 // pitch_ = unpacked_data[14] << 8 | unpacked_data[15];
                 // yaw_ = unpacked_data[16] << 8 | unpacked_data[17];

@@ -38,3 +38,9 @@ dtparam=fan_temp3_hyst=5000
 dtparam=fan_temp3_speed=250
 
 3- reboot
+
+change rf2odom package source 
+in node .cpp
+odom.header.stamp = get_clock()->now();
+odom_trans.header.stamp = get_clock()->now();
+

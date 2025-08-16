@@ -3,4 +3,4 @@ map_server:
         frame_id: map
         topic_name: map
         use_sim_time: true
-        yaml_filename: test_map.yaml
+        yaml_filename: testing_map.yaml

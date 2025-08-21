@@ -14,7 +14,7 @@
 
       <hardware>
         <plugin>water_bot_control/WarterBotHardware</plugin>
-        <param name = "wheel_radius">20.00</param>
+        <param name = "wheel_radius">100.00</param>
 
       </hardware>
       <xacro:if value="${use_mock_hardware}">
@@ -33,6 +33,13 @@
         <state_interface name="position"/>
         <state_interface name="velocity"/>
       </joint>
+
+      <gpio name = "${prefix}water_bot_IOs">
+        <command_interface name="clean_mode"/>
+        <state_interface name="op_mode"/>
+        <state_interface name="clean_mode"/>
+      </gpio>
+
     </ros2_control>
 
   </xacro:macro>

@@ -1,0 +1,48 @@
+1. cpu occupy issue
+2. self rotate issue 
+3. local plan can't reach goal issue  
+
+[bt_navigator-1] [INFO] [1755676677.019861179] [bt_navigator]: Begin navigating from current location (0.86, 0.14) to (1.17, 0.11)
+[controller_server-3] [INFO] [1755676677.061299648] [controller_server]: Received a goal, begin computing control effort.
+[bt_navigator-1] [WARN] [1755676678.098040112] [bt_navigator_navigate_to_pose_rclcpp_node]: Timed out while waiting for action server to acknowledge goal request for compute_path_to_pose
+[bt_navigator-1] [ERROR] [1755676678.123347185] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to cancel action server for follow_path
+[bt_navigator-1] [ERROR] [1755676678.143693146] [bt_navigator_navigate_to_pose_rclcpp_node]: Failed to get result for follow_path in node halt!
+[bt_navigator-1] [WARN] [1755676678.146881500] [bt_navigator]: [navigate_to_pose] [ActionServer] Aborting handle.
+[bt_navigator-1] [ERROR] [1755676678.147066331] [bt_navigator]: Goal failed
+[controller_server-3] [INFO] [1755676678.183805093] [controller_server]: Cancellation was successful. Stopping the robot.
+[controller_server-3] [INFO] [1755676678.183961295] [controller_server]: [follow_path] [ActionServer] Client requested to cancel the goal. Cancelling.
+
+
+[bt_navigator-1] [INFO] [1755677100.127934949] [bt_navigator]: Begin navigating from current location (0.91, 0.06) to (1.12, 0.05)
+[planner_server-4] [WARN] [1755677100.510813002] [planner_server]: Planner loop missed its desired rate of 20.0000 Hz. Current loop rate is 2.2680 Hz
+[controller_server-3] [INFO] [1755677100.531321368] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1755677100.548450687] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.548568131] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677100.548993016] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.675597197] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.675712566] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677100.676579781] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.753240509] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.753485507] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677100.754287760] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.846230860] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.846344248] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677100.846994521] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677100.847101853] [controller_server]: Controller patience exceeded
+[controller_server-3] [WARN] [1755677100.847272852] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[controller_server-3] [INFO] [1755677100.858442795] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[controller_server-3] [INFO] [1755677100.861284808] [controller_server]: Received a goal, begin computing control effort.
+[controller_server-3] [ERROR] [1755677101.041970240] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.042672993] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677101.044325665] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [WARN] [1755677101.045610913] [controller_server]: Control loop missed its desired rate of 10.0000 Hz. Current loop rate is 5.4345 Hz.
+[controller_server-3] [ERROR] [1755677101.056552599] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.057106965] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677101.058213289] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.070942220] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.071059330] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677101.071929786] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.177671938] [DWBLocalPlanner]: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.177862066] [DWBLocalPlanner]: 1.00: RotateToGoal/Nonrotation command near goal.
+[controller_server-3] [WARN] [1755677101.181434128] [controller_server]: Could not find a legal trajectory: No valid trajectories out of 369!
+[controller_server-3] [ERROR] [1755677101.181598238] [controller_server]: Controller patience exceeded

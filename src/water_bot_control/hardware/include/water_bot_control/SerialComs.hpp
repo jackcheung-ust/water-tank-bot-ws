@@ -58,43 +58,37 @@ class SerialComs {
             return serial_com_.IsOpen();
         }
 
+        int get_op_mode(){
+            return op_mode_;
+        }
         
-
-        // void send_cmd_motor(int16_t cmd_left, int16_t cmd_right){
-        //     //1.create data stack 
-        //     uint8_t l_motor_velocity[2] = {static_cast<uint8_t>(cmd_left >> 8), static_cast<uint8_t>(cmd_left & 0xFF)};
-        //     uint8_t r_motor_velocity[2] = {static_cast<uint8_t>(cmd_right >> 8), static_cast<uint8_t>(cmd_right & 0xFF)};
-        //     //2.pack the data into data pack 
-            
-        //     //3.send data pack to serial port 
-
-        //     //4.receive data from serial port 
-
-        //     //5.unpack the data from data pack 
-            
-        // }
-
-        int write_data(int16_t l_wheel_v, int16_t r_wheel_v){
-            if (clean_mode_ == 0){
+        int get_clean_mode(){
+            return clean_mode_feedback_;
+        }
+       
+        int write_data(int16_t l_wheel_v, int16_t r_wheel_v, int16_t clean_mode){
+            if (op_mode_ == 0){
                 //currently in the water mode, just send heartbeat 
-                // std::cout<<"Sending empty heartbeat..."<<std::endl;
+                // std::cout<<"current mode is manual...."<<std::endl;
                 send_heartbeat(pack_id);
                 ack_send = false;
                 // std::cout<<"func done"<< std::endl;
             }
-            else if (clean_mode_ == 1 or clean_mode_ == 2){
+            else if (op_mode_ == 1 or op_mode_ == 2){
                 //send motor velocity 
+                // std::cout<<"current mode is auto...."<<std::endl;
                 if (ack_send != true){
                     send_auto_ack(pack_id);
                     ack_send = true;
                 }else {
-                    send_motor_control(pack_id,l_wheel_v,r_wheel_v);
+                    // std::cout<<"inside write data left v : "<<l_wheel_v<<" right v : " <<r_wheel_v<<" clean_mode : "<< clean_mode <<std::endl;
+                    send_motor_control(pack_id,l_wheel_v,r_wheel_v,clean_mode);
                 }
             }
 
-            else if (clean_mode_ == -1){
+            else if (op_mode_ == -1){
                 // std::cout<<"inside write data left v : "<<l_wheel_v<<" right v : " <<r_wheel_v<<std::endl;
-                send_motor_control(pack_id,l_wheel_v,r_wheel_v);
+                send_motor_control(pack_id,l_wheel_v,r_wheel_v,0);
             }
 
             usleep(time_out_*1000);
@@ -317,19 +311,30 @@ class SerialComs {
             return packed_data_size;
         }
 
-        int send_motor_control(uint8_t packet_id,int16_t l_motor_v, int16_t r_motor_v){
+        int send_motor_control(uint8_t packet_id,int16_t l_motor_v, int16_t r_motor_v, int16_t clean_mode){
             if (!serial_com_.IsOpen()) {
                 std::cerr << "Serial port is not open!" << std::endl;
                 return -1;
             }
+
+             // Check and adjust left motor velocity
+            if (abs(l_motor_v) >= 100 && abs(l_motor_v) <= 200) {
+                l_motor_v = (l_motor_v >= 0) ? 200 : -200;
+            }
+
+            // Check and adjust right motor velocity  
+            if (abs(r_motor_v) >= 100 && abs(r_motor_v) <= 200) {
+                r_motor_v = (r_motor_v >= 0) ? 200 : -200;
+            }
+
 
             uint8_t l_motor_v_upper = static_cast<uint8_t>(l_motor_v >> 8);
             uint8_t l_motor_v_lower = static_cast<uint8_t>(l_motor_v & 0xFF);
             
             uint8_t r_motor_v_upper = static_cast<uint8_t>(r_motor_v >> 8); 
             uint8_t r_motor_v_lower = static_cast<uint8_t>(r_motor_v & 0xFF);
-
-            uint8_t control_data[10] = {49, 51, packet_id,3,0,l_motor_v_upper,l_motor_v_lower,r_motor_v_upper,r_motor_v_lower,0};
+            uint8_t clean = static_cast<uint8_t>(clean_mode & 0xFF);
+            uint8_t control_data[10] = {49, 51, packet_id,3,0,l_motor_v_upper,l_motor_v_lower,r_motor_v_upper,r_motor_v_lower,clean};
 
             // FIXED: This was the CRITICAL buffer overflow causing stack smashing!
             // Original: 16 bytes buffer (10+6) but could need up to 26 bytes worst case
@@ -386,7 +391,7 @@ class SerialComs {
             // Bounds-checked parsing with proper validation
             if (unpacked_size >= 19 && unpacked_data[3]==2 && unpacked_data[4]==0){
                 operate_mode_ = unpacked_data[7];
-                clean_mode_ = unpacked_data[8];
+                op_mode_ = unpacked_data[8];
                 f_safe_d = unpacked_data[9] << 8 | unpacked_data[10];
                 b_safe_d = unpacked_data[11] << 8 | unpacked_data[12];
                 l_safe_d = unpacked_data[13] << 8 | unpacked_data[14];
@@ -410,14 +415,16 @@ class SerialComs {
                 roll_ = unpacked_data[12] << 8 | unpacked_data[13];
                 pitch_ = unpacked_data[14] << 8 | unpacked_data[15];
                 yaw_ = unpacked_data[16] << 8 | unpacked_data[17];
-                clean_mode_feedback_ = unpacked_data[18];
+                clean_mode_feedback_ =  static_cast<int>(unpacked_data[18]);
+                // std::cout << "clean mode feedback : " << clean_mode_feedback_ << std::endl;
+                
             }
         
             else if (unpacked_size >= 12 && unpacked_data[3]==1 && unpacked_data[4]==0){
                 operate_mode_ = unpacked_data[7];
                 left_w_speed_feedback_ = unpacked_data[8] << 8 | unpacked_data[9];
                 right_w_speed_feedback_ = unpacked_data[10] << 8 | unpacked_data[11];
-                clean_mode_ = 0;
+                op_mode_ = 0;
                 // roll_ = unpacked_data[12] << 8 | unpacked_data[13];
                 // pitch_ = unpacked_data[14] << 8 | unpacked_data[15];
                 // yaw_ = unpacked_data[16] << 8 | unpacked_data[17];
@@ -437,7 +444,7 @@ class SerialComs {
         bool ack_send = false;
         int time_out_; 
         int operate_mode_; //0: standby, 1:soft stop, 2:Recovery mode, 3:manual mode, 4:auto mode start, 5:auto mode stop, 6:auto mode pause, 7:auto mode resume
-        int clean_mode_ = -1;//0: water clean 1: water-free clean 2: water-free flush -1:function test
+        int op_mode_ = 0;//0: water clean 1: water-free clean 2: water-free flush -1:function test
         int clean_mode_feedback_; 
         uint8_t pack_id = 1; 
         uint16_t f_safe_d;

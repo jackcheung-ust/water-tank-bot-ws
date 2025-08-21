@@ -39,18 +39,18 @@ def generate_launch_description():
             description="Start robot with mock hardware mirroring command to its states.",
         )
     )
-    declared_arguments.append(
-        DeclareLaunchArgument(
-            "log_level",
-            default_value="debug",
-            description="Set the logging level for ROS2 nodes.",
-        )
-    )
+    # declared_arguments.append(
+    #     DeclareLaunchArgument(
+    #         "log_level",
+    #         default_value="debug",
+    #         description="Set the logging level for ROS2 nodes.",
+    #     )
+    # )
 
     # Initialize Arguments
     gui = LaunchConfiguration("gui")
     use_mock_hardware = LaunchConfiguration("use_mock_hardware")
-    log_level = LaunchConfiguration("log_level")
+    # log_level = LaunchConfiguration("log_level")
 
     # Get URDF via xacro
     robot_description_content = Command(
@@ -89,7 +89,7 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         output="both",
-        parameters=[robot_description, {"publish_frequency": 30.0}],
+        parameters=[robot_description, {"publish_frequency": 10.0}],
         # arguments=["--log-level", log_level],
     )
     rviz_node = Node(
@@ -120,6 +120,12 @@ def generate_launch_description():
         ],
     )
 
+    gpio_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["gpio_controller", "--param-file", robot_controllers],
+    )
+
     # Delay rviz start after `joint_state_broadcaster`
     delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
@@ -128,11 +134,18 @@ def generate_launch_description():
         )
     )
 
+    delay_gpio_after_robot_controller_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=robot_controller_spawner,
+            on_exit=[gpio_controller_spawner],
+        )
+    )
+
     # Delay start of joint_state_broadcaster after `robot_controller`
     # TODO(anyone): This is a workaround for flaky tests. Remove when fixed.
     delay_joint_state_broadcaster_after_robot_controller_spawner = RegisterEventHandler(
         event_handler=OnProcessExit(
-            target_action=robot_controller_spawner,
+            target_action=gpio_controller_spawner,
             on_exit=[joint_state_broadcaster_spawner],
         )
     )
@@ -142,6 +155,7 @@ def generate_launch_description():
         robot_state_pub_node,
         robot_controller_spawner,
         delay_rviz_after_joint_state_broadcaster_spawner,
+        delay_gpio_after_robot_controller_spawner,
         delay_joint_state_broadcaster_after_robot_controller_spawner,
     ]
 

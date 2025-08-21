@@ -89,6 +89,28 @@ hardware_interface::CallbackReturn WarterBotHardware::on_init(
     }
   }
 
+  //the current system has extact two gpio interface
+  if(info_.gpios.size()!=1){
+    RCLCPP_FATAL(
+      get_logger(), "waterbot hardware system has '%ld' GPIO components, but '%d' expected.",
+      info_.gpios.size(), 1);
+    return hardware_interface::CallbackReturn::ERROR;
+  }
+
+  if(info_.gpios[0].command_interfaces.size() != 1){
+    RCLCPP_FATAL(
+        get_logger(), "GPIO component %s has '%ld' command interfaces, '%d' expected.",
+        info_.gpios[0].name.c_str(), info_.gpios[0].command_interfaces.size(), 1);
+      return hardware_interface::CallbackReturn::ERROR;
+  }
+
+  if(info_.gpios[0].state_interfaces.size() != 2){
+    RCLCPP_FATAL(
+      get_logger(), "GPIO component %s has '%ld' state interfaces, '%d' expected.",
+      info_.gpios[0].name.c_str(), info_.gpios[0].state_interfaces.size(), 2);
+    return hardware_interface::CallbackReturn::ERROR;
+  }
+
   return hardware_interface::CallbackReturn::SUCCESS;
 }
 
@@ -110,6 +132,15 @@ hardware_interface::CallbackReturn WarterBotHardware::on_configure(
   {
     set_command(name, 0.0);
   }
+
+  for (const auto & [name, descr] : gpio_command_interfaces_){
+    set_command(name, 0.0);
+  }
+
+  for (const auto & [name, descr] : gpio_state_interfaces_){
+    set_state(name, 0.0);
+  }
+
   RCLCPP_INFO(get_logger(), "Successfully configured!");
 
   return hardware_interface::CallbackReturn::SUCCESS;
@@ -131,6 +162,11 @@ hardware_interface::CallbackReturn WarterBotHardware::on_activate(
 
   // command and state should be equal when starting
   for (const auto & [name, descr] : joint_command_interfaces_)
+  {
+    set_command(name, get_state(name));
+  }
+
+   for (const auto & [name, descr] : gpio_command_interfaces_)
   {
     set_command(name, get_state(name));
   }
@@ -179,7 +215,17 @@ hardware_interface::return_type WarterBotHardware::read(
     }
   }
   
-  RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
+ set_state(
+    info_.gpios[0].name+ "/" + info_.gpios[0].state_interfaces[0].name,
+    static_cast<double>(serialcom_.get_op_mode())
+    );
+
+  set_state(
+    info_.gpios[0].name+ "/" + info_.gpios[0].state_interfaces[1].name,
+    static_cast<double>(serialcom_.get_clean_mode())
+    );
+
+  // RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
   
 
   return hardware_interface::return_type::OK;
@@ -200,23 +246,43 @@ hardware_interface::return_type water_bot_control ::WarterBotHardware::write(
       right_v_rad_ = get_command(name);
     }
 
-    ss << std::fixed << std::setprecision(2) << std::endl
-       << "\t" << "command " << get_command(name) << " for '" << name << "'!";
+    // ss << std::fixed << std::setprecision(2) << std::endl
+    //    << "\t" << "command " << get_command(name) << " for '" << name << "'!";
     
   }
-  RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
+
+  for (const auto & [name, descr] : gpio_command_interfaces_)
+  {
+    if (descr.get_prefix_name() == "water_bot_IOs"){
+      clean_mode_command = get_command(name);
+      ss << std::fixed << std::setprecision(2) << std::endl
+       << "\t" << get_command(name) << " for GPIO output '" << name << "'";
+    }
+  }
+
+  // RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss.str().c_str());
   // double left_command = left_v_rad_ * wheel_radius_;
   // double right_command = right_v_rad_ * wheel_radius_;
   //convert rad/s into linear velocity 
   int16_t left_command = static_cast<int16_t>(left_v_rad_ * wheel_radius_);
   int16_t right_command = static_cast<int16_t>(right_v_rad_ * wheel_radius_);
-  // std::stringstream ss1;
+  std::stringstream ss1;
   // ss1 << std::endl << "\t" <<"converted left command :" << left_v_command << "...";
   // ss1 << std::endl << "\t" <<"converted right command :" << right_v_command << "...";
   // RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss1.str().c_str());
   //write command v to the hardware 
-  serialcom_.write_data(left_command,right_command);
+  int16_t clean_mode_command_sent = 0;
+  if (clean_mode_command >= 0.0 && clean_mode_command <= 2.0) {
+    clean_mode_command_sent = static_cast<int16_t>(std::round(clean_mode_command));
+  } else {
+    RCLCPP_WARN(get_logger(), "Clean mode command out of bounds: %f. Using 0.", clean_mode_command);
+    clean_mode_command_sent = 0;
+  }
 
+  // ss1 << "clean mode from the command interface : " << clean_mode_command << std::endl;
+  // ss1 << "coverted clean mode command : " << clean_mode_command_sent << std::endl;
+  // RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 500, "%s", ss1.str().c_str());
+  serialcom_.write_data(left_command,right_command,clean_mode_command_sent);
 
   return hardware_interface::return_type::OK;
 }

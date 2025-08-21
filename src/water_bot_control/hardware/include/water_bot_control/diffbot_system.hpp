@@ -65,6 +65,7 @@ private:
   double right_v_rad_;
   double left_v_command = 0.0;
   double right_v_command = 0.0; 
+  double clean_mode_command = 0.0;
 };
 
 }  // namespace water_bot_control

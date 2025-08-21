@@ -140,7 +140,7 @@
         <geometry>
           <sphere radius="${caster_wheel_radius}"/>
         </geometry>
-        <material name="white"/>
+        <material name="red"/>
       </visual>
 
       <inertial>
@@ -189,7 +189,7 @@
     <joint name="${prefix}laser" type="fixed">
       <parent link="${prefix}base_link"/>
       <child link="${prefix}lidar_link"/>
-      <origin xyz="0 0 ${base_height/2 + lidar_height/2}" rpy="0 0 0"/>
+      <origin xyz="0 0 ${base_height/2 + lidar_height/2}" rpy="0 0 ${PI}"/>
     </joint>
 
     <!-- lidar Link -->
